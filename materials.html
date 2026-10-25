@@ -1,142 +1,188 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="violet">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Учебные материалы для студентов колледжа (IT, сети, ОС)</title>
-  <meta name="description" content="База знаний: конспекты, тесты, инструкции по Linux/Windows Server, Cisco. Скачивание бесплатно.">
+  <meta name="description"
+    content="База знаний: конспекты, тесты, инструкции по Linux/Windows Server, Cisco. Скачивание бесплатно.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<header class="site-header">
-  <div class="container nav">
-    <a class="logo" href="index.html"><span class="prompt">root@ppk:</span>~solovceva<span class="cursor"></span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-label="Меню">меню</button>
-    <ul class="nav-links">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="about.html">Обо мне</a></li>
-      <li><a href="disciplines.html">Дисциплины</a></li>
-      <li><a href="materials.html" class="active">Материалы</a></li>
-      <li><a href="projects.html">Проекты</a></li>
-      <li><a href="method.html">Методика</a></li>
-      <li><a href="contacts.html">Контакты</a></li>
-    </ul>
-  </div>
-</header>
-
-<section class="page-head">
-  <div class="container">
-    <h1>Библиотека учебных материалов</h1>
-    <span class="mono">// repo: /materials // filters: on // search: ready</span>
-    <p class="desc">Рабочие программы, КИМы, презентации, конспекты и методические рекомендации. Используйте фильтры по типу и поиск по названию.</p>
-  </div>
-</section>
-
-<section class="content-section">
-  <div class="container">
-    <nav class="crumbs"><a href="index.html">Главная</a> &gt; Учебные материалы</nav>
-
-    <div class="filters">
-      <button class="filter-btn active" data-filter="all">Все</button>
-      <button class="filter-btn" data-filter="pdf">Документы/PDF</button>
-      <button class="filter-btn" data-filter="pres">Презентации</button>
-      <button class="filter-btn" data-filter="lab">Лабораторные</button>
-      <button class="filter-btn" data-filter="test">Тесты/КИМ</button>
-      <button class="filter-btn" data-filter="note">Конспекты</button>
-      <input id="mat-search" class="search-input" type="search" placeholder="Поиск по названию…" aria-label="Поиск материалов">
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html"><span class="prompt">root@ppk:</span>~solovceva<span class="cursor"></span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Меню">меню</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">Обо мне</a></li>
+        <li><a href="disciplines.html">Дисциплины</a></li>
+        <li><a href="materials.html" class="active">Материалы</a></li>
+        <li><a href="projects.html">Проекты</a></li>
+        <li><a href="method.html">Методика</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+      <div class="theme-switch" role="group" aria-label="Цветовая тема">
+        <button type="button" data-set="green" title="Зелёная палитра">🟢 Зелёная</button>
+        <button type="button" data-set="violet" title="Сине-фиолетовая палитра">🟣 Сине-фиолетовая</button>
+      </div>
     </div>
+  </header>
 
-    <div id="materials-grid" class="mat-grid">
-
-      <div class="mat-card" data-type="pdf" data-disc="ОП.07">
-        <div class="mat-icon t-pdf">PDF</div>
-        <div><h3>Рабочая программа ОП.07 «Операционные системы и среды»</h3><span class="tag">ОП.07 · РП</span><br>
-        <a class="dl" href="files/wp-op-07.pdf" download>Скачать →</a></div>
-      </div>
-
-      <div class="mat-card" data-type="pdf" data-disc="ОП.06">
-        <div class="mat-icon t-pdf">PDF</div>
-        <div><h3>Рабочая программа ОП.06 «Архитектура аппаратных средств»</h3><span class="tag">ОП.06 · РП</span><br>
-        <a class="dl" href="files/wp-op-06.pdf" download>Скачать →</a></div>
-      </div>
-
-      <div class="mat-card" data-type="pdf" data-disc="ПМ.01">
-        <div class="mat-icon t-pdf">PDF</div>
-        <div><h3>Рабочая программа МДК.01.01 «Компьютерные сети»</h3><span class="tag">ПМ.01 · РП</span><br>
-        <a class="dl" href="files/wp-mdk-01-01.pdf" download>Скачать →</a></div>
-      </div>
-
-      <div class="mat-card" data-type="pdf" data-disc="ПМ.01">
-        <div class="mat-icon t-pdf">PDF</div>
-        <div><h3>Рабочая программа МДК.01.02 «Организация, принципы построения и функционирования КС»</h3><span class="tag">ПМ.01 · РП</span><br>
-        <a class="dl" href="files/wp-mdk-01-02.pdf" download>Скачать →</a></div>
-      </div>
-
-      <div class="mat-card" data-type="pdf" data-disc="ПМ.02">
-        <div class="mat-icon t-pdf">PDF</div>
-        <div><h3>Рабочая программа МДК.02.01 «Администрирование сетевых операционных систем»</h3><span class="tag">ПМ.02 · РП</span><br>
-        <a class="dl" href="files/wp-mdk-02-01.pdf" download>Скачать →</a></div>
-      </div>
-
-      <div class="mat-card" data-type="test" data-disc="ОП.04">
-        <div class="mat-icon t-test">КИМ</div>
-        <div><h3>Комплект КИМ «Технические средства информатизации»</h3><span class="tag">КИМ · тесты</span><br>
-        <a class="dl" href="files/kim-tsi.pdf" download>Скачать →</a></div>
-      </div>
-
-      <div class="mat-card" data-type="test" data-disc="ОП.04">
-        <div class="mat-icon t-test">КИМ</div>
-        <div><h3>Комплект КИМ «Основы алгоритмизации и программирования»</h3><span class="tag">ОП.04 · КИМ</span><br>
-        <a class="dl" href="files/kim-op-04.pdf" download>Скачать →</a></div>
-      </div>
-
-      <div class="mat-card" data-type="doc" data-disc="Проекты">
-        <div class="mat-icon t-doc">DOC</div>
-        <div><h3>Методические рекомендации по реализации индивидуального проекта</h3><span class="tag">семинар 20.02.2026</span><br>
-        <a class="dl" href="https://disk.yandex.ru/d/ЗАМЕНИТЬ_ССЫЛКУ" target="_blank" rel="noopener">Открыть на Яндекс.Диске →</a></div>
-      </div>
-
-      <div class="mat-card" data-type="note" data-disc="Методика">
-        <div class="mat-icon t-note">PDF</div>
-        <div><h3>Опорный конспект как механизм реализации содержания учебного занятия</h3><span class="tag">доклад 31.08.2026</span><br>
-        <a class="dl" href="https://disk.yandex.ru/d/ЗАМЕНИТЬ_ССЫЛКУ" target="_blank" rel="noopener">Открыть на Яндекс.Диске →</a></div>
-      </div>
-
-      <div class="mat-card" data-type="pres" data-disc="ПМ.02">
-        <div class="mat-icon t-pres">PPTX</div>
-        <div><h3>Презентация «Установка Windows Server»</h3><span class="tag">ПМ.02 · презентация</span><br>
-        <a class="dl" href="https://disk.yandex.ru/d/ЗАМЕНИТЬ_ССЫЛКУ" target="_blank" rel="noopener">Открыть на Яндекс.Диске →</a></div>
-      </div>
-
-      <div class="mat-card" data-type="pres" data-disc="ПМ.01">
-        <div class="mat-icon t-pres">PPTX</div>
-        <div><h3>Презентации «VLAN и маршрутизация»</h3><span class="tag">ПМ.01 · презентация</span><br>
-        <a class="dl" href="https://disk.yandex.ru/d/ЗАМЕНИТЬ_ССЫЛКУ" target="_blank" rel="noopener">Открыть на Яндекс.Диске →</a></div>
-      </div>
-
-      <div class="mat-card" data-type="lab" data-disc="ПМ.03">
-        <div class="mat-icon t-lab">LAB</div>
-        <div><h3>Лабораторные работы по системам виртуализации</h3><span class="tag">ПМ.03 · лабы</span><br>
-        <a class="dl" href="https://disk.yandex.ru/d/ЗАМЕНИТЬ_ССЫЛКУ" target="_blank" rel="noopener">Открыть на Яндекс.Диске →</a></div>
-      </div>
-
+  <section class="page-head">
+    <div class="container">
+      <h1>Библиотека учебных материалов</h1>
+      <span class="mono">// repo: /materials // filters: on // search: ready</span>
+      <p class="desc">Рабочие программы, КИМы, презентации, конспекты и методические рекомендации. Используйте фильтры
+        по типу и поиск по названию.</p>
     </div>
+  </section>
 
-    <p id="materials-empty" style="display:none;color:var(--text-muted);margin-top:20px">Ничего не найдено. Измените фильтр или запрос.</p>
-  </div>
-</section>
+  <section class="content-section">
+    <div class="container">
+      <nav class="crumbs"><a href="index.html">Главная</a> &gt; Учебные материалы</nav>
 
-<footer class="site-footer">
-  <div class="container">
-    <div>© <span id="year">2026</span> Соловцева Инна Александровна · ГПОАУ ЯО «ППК Ростова Великого», Борисоглебский ЦПО</div>
-    <div class="mono">spec: 09.02.06 | status: ONLINE</div>
-  </div>
-</footer>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="pdf">Документы/PDF</button>
+        <button class="filter-btn" data-filter="pres">Презентации</button>
+        <button class="filter-btn" data-filter="lab">Лабораторные</button>
+        <button class="filter-btn" data-filter="test">Тесты/КИМ</button>
+        <button class="filter-btn" data-filter="note">Конспекты</button>
+        <input id="mat-search" class="search-input" type="search" placeholder="Поиск по названию…"
+          aria-label="Поиск материалов">
+      </div>
 
-<script src="js/main.js"></script>
+      <div id="materials-grid" class="mat-grid">
+
+        <div class="mat-card" data-type="pdf" data-disc="ОП.07">
+          <div class="mat-icon t-pdf">PDF</div>
+          <div>
+            <h3>Рабочая программа ОП.07 «Операционные системы и среды»</h3><span class="tag">ОП.07 · РП</span><br>
+            <a class="dl" href="files/wp-op-07.pdf" download>Скачать →</a>
+          </div>
+        </div>
+
+        <div class="mat-card" data-type="pdf" data-disc="ОП.06">
+          <div class="mat-icon t-pdf">PDF</div>
+          <div>
+            <h3>Рабочая программа ОП.06 «Архитектура аппаратных средств»</h3><span class="tag">ОП.06 · РП</span><br>
+            <a class="dl" href="files/wp-op-06.pdf" download>Скачать →</a>
+          </div>
+        </div>
+
+        <div class="mat-card" data-type="pdf" data-disc="ПМ.01">
+          <div class="mat-icon t-pdf">PDF</div>
+          <div>
+            <h3>Рабочая программа МДК.01.01 «Компьютерные сети»</h3><span class="tag">ПМ.01 · РП</span><br>
+            <a class="dl" href="files/wp-mdk-01-01.pdf" download>Скачать →</a>
+          </div>
+        </div>
+
+        <div class="mat-card" data-type="pdf" data-disc="ПМ.01">
+          <div class="mat-icon t-pdf">PDF</div>
+          <div>
+            <h3>Рабочая программа МДК.01.02 «Организация, принципы построения и функционирования КС»</h3><span
+              class="tag">ПМ.01 · РП</span><br>
+            <a class="dl" href="files/wp-mdk-01-02.pdf" download>Скачать →</a>
+          </div>
+        </div>
+
+        <div class="mat-card" data-type="pdf" data-disc="ПМ.02">
+          <div class="mat-icon t-pdf">PDF</div>
+          <div>
+            <h3>Рабочая программа МДК.02.01 «Администрирование сетевых операционных систем»</h3><span class="tag">ПМ.02
+              · РП</span><br>
+            <a class="dl" href="files/wp-mdk-02-01.pdf" download>Скачать →</a>
+          </div>
+        </div>
+
+        <div class="mat-card" data-type="test" data-disc="ОП.04">
+          <div class="mat-icon t-test">КИМ</div>
+          <div>
+            <h3>Комплект КИМ «Технические средства информатизации»</h3><span class="tag">КИМ · тесты</span><br>
+            <a class="dl" href="files/kim-tsi.pdf" download>Скачать →</a>
+          </div>
+        </div>
+
+        <div class="mat-card" data-type="test" data-disc="ОП.04">
+          <div class="mat-icon t-test">КИМ</div>
+          <div>
+            <h3>Комплект КИМ «Основы алгоритмизации и программирования»</h3><span class="tag">ОП.04 · КИМ</span><br>
+            <a class="dl" href="files/kim-op-04.pdf" download>Скачать →</a>
+          </div>
+        </div>
+
+        <div class="mat-card" data-type="doc" data-disc="Проекты">
+          <div class="mat-icon t-doc">DOC</div>
+          <div>
+            <h3>Методические рекомендации по реализации индивидуального проекта</h3><span class="tag">семинар
+              20.02.2026</span><br>
+            <a class="dl" href="https://disk.yandex.ru/d/ЗАМЕНИТЬ_ССЫЛКУ" target="_blank" rel="noopener">Открыть на
+              Яндекс.Диске →</a>
+          </div>
+        </div>
+
+        <div class="mat-card" data-type="note" data-disc="Методика">
+          <div class="mat-icon t-note">PDF</div>
+          <div>
+            <h3>Опорный конспект как механизм реализации содержания учебного занятия</h3><span class="tag">доклад
+              31.08.2026</span><br>
+            <a class="dl" href="https://disk.yandex.ru/d/ЗАМЕНИТЬ_ССЫЛКУ" target="_blank" rel="noopener">Открыть на
+              Яндекс.Диске →</a>
+          </div>
+        </div>
+
+        <div class="mat-card" data-type="pres" data-disc="ПМ.02">
+          <div class="mat-icon t-pres">PPTX</div>
+          <div>
+            <h3>Презентация «Установка Windows Server»</h3><span class="tag">ПМ.02 · презентация</span><br>
+            <a class="dl" href="https://disk.yandex.ru/d/ЗАМЕНИТЬ_ССЫЛКУ" target="_blank" rel="noopener">Открыть на
+              Яндекс.Диске →</a>
+          </div>
+        </div>
+
+        <div class="mat-card" data-type="pres" data-disc="ПМ.01">
+          <div class="mat-icon t-pres">PPTX</div>
+          <div>
+            <h3>Презентации «VLAN и маршрутизация»</h3><span class="tag">ПМ.01 · презентация</span><br>
+            <a class="dl" href="https://disk.yandex.ru/d/ЗАМЕНИТЬ_ССЫЛКУ" target="_blank" rel="noopener">Открыть на
+              Яндекс.Диске →</a>
+          </div>
+        </div>
+
+        <div class="mat-card" data-type="lab" data-disc="ПМ.03">
+          <div class="mat-icon t-lab">LAB</div>
+          <div>
+            <h3>Лабораторные работы по системам виртуализации</h3><span class="tag">ПМ.03 · лабы</span><br>
+            <a class="dl" href="https://disk.yandex.ru/d/ЗАМЕНИТЬ_ССЫЛКУ" target="_blank" rel="noopener">Открыть на
+              Яндекс.Диске →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <p id="materials-empty" style="display:none;color:var(--text-muted);margin-top:20px">Ничего не найдено. Измените
+        фильтр или запрос.</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© <span id="year">2019</span> Соловцева Инна Александровна</div>
+      <div class="mono">spec: 09.02.06 | status: ONLINE</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
+
 </html>

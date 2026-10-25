@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="violet">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,96 +8,133 @@
   <meta name="description" content="Электронная почта, график консультаций, адрес колледжа. Форма обратной связи.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<header class="site-header">
-  <div class="container nav">
-    <a class="logo" href="index.html"><span class="prompt">root@ppk:</span>~solovceva<span class="cursor"></span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-label="Меню">меню</button>
-    <ul class="nav-links">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="about.html">Обо мне</a></li>
-      <li><a href="disciplines.html">Дисциплины</a></li>
-      <li><a href="materials.html">Материалы</a></li>
-      <li><a href="projects.html">Проекты</a></li>
-      <li><a href="method.html">Методика</a></li>
-      <li><a href="contacts.html" class="active">Контакты</a></li>
-    </ul>
-  </div>
-</header>
-
-<section class="page-head">
-  <div class="container">
-    <h1>Контакты</h1>
-    <span class="mono">// ping solovceva — reply: inna742@ya.ru</span>
-    <p class="desc">Пишите по вопросам учебных материалов, консультаций по курсовым и сотрудничества.</p>
-  </div>
-</section>
-
-<section class="content-section">
-  <div class="container">
-    <nav class="crumbs"><a href="index.html">Главная</a> &gt; Контакты</nav>
-    <div class="contact-grid">
-
-      <div class="contact-card">
-        <h2 class="section-title" style="font-size:20px">Реквизиты</h2>
-        <ul style="margin-top:16px">
-          <li><div class="k">ФИО</div><div><strong>Соловцева Инна Александровна</strong></div></li>
-          <li><div class="k">Должность</div><div>Преподаватель высшей квалификационной категории</div></li>
-          <li><div class="k">Место работы</div><div>ГПОАУ ЯО «Профессионально-педагогический колледж Ростова Великого», Борисоглебский центр профессионального образования</div></li>
-          <li><div class="k">E-mail</div><div><a href="mailto:inna742@ya.ru">inna742@ya.ru</a></div></li>
-          <li><div class="k">Телефон</div><div><a href="tel:+79201023400">+7-920-102-34-00</a></div></li>
-          <li><div class="k">График консультаций</div><div><!-- укажите convenient часы --> по договорённости через e-mail</div></li>
-        </ul>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html"><span class="prompt">root@ppk:</span>~solovceva<span class="cursor"></span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Меню">меню</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">Обо мне</a></li>
+        <li><a href="disciplines.html">Дисциплины</a></li>
+        <li><a href="materials.html">Материалы</a></li>
+        <li><a href="projects.html">Проекты</a></li>
+        <li><a href="method.html">Методика</a></li>
+        <li><a href="contacts.html" class="active">Контакты</a></li>
+      </ul>
+      <div class="theme-switch" role="group" aria-label="Цветовая тема">
+        <button type="button" data-set="green" title="Зелёная палитра">🟢 Зелёная</button>
+        <button type="button" data-set="violet" title="Сине-фиолетовая палитра">🟣 Сине-фиолетовая</button>
       </div>
-
-      <div class="contact-card">
-        <h2 class="section-title" style="font-size:20px">Форма обратной связи</h2>
-        <form id="contact-form" style="margin-top:16px">
-          <div class="form-field">
-            <label for="f-name">Имя *</label>
-            <input id="f-name" name="name" type="text" required placeholder="Как к вам обращаться">
-          </div>
-          <div class="form-field">
-            <label for="f-email">Email *</label>
-            <input id="f-email" name="email" type="email" required placeholder="you@example.com">
-          </div>
-          <div class="form-field">
-            <label for="f-topic">Тип обращения</label>
-            <select id="f-topic" name="topic">
-              <option>Студент</option>
-              <option>Коллега</option>
-              <option>Работодатель</option>
-              <option>Другое</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label for="f-msg">Сообщение *</label>
-            <textarea id="f-msg" name="message" rows="5" required placeholder="Ваш вопрос или предложение"></textarea>
-          </div>
-          <div class="form-field checkbox-row">
-            <input id="f-agree" name="agree" type="checkbox" required>
-            <label for="f-agree" style="font-weight:400">Я согласен(а) на обработку персональных данных в соответствии с 152-ФЗ «О персональных данных» *</label>
-          </div>
-          <button class="btn btn-primary" type="submit">Отправить сообщение</button>
-          <div id="form-ok" class="form-ok">✅ Спасибо! Открылась ваша почтовая программа — отправьте письмо. Если оно не открылось, напишите напрямую: <a href="mailto:inna742@ya.ru">inna742@ya.ru</a></div>
-        </form>
-      </div>
-
     </div>
-  </div>
-</section>
+  </header>
 
-<footer class="site-footer">
-  <div class="container">
-    <div>© <span id="year">2026</span> Соловцева Инна Александровна · ГПОАУ ЯО «ППК Ростова Великого», Борисоглебский ЦПО</div>
-    <div class="mono">spec: 09.02.06 | status: ONLINE</div>
-  </div>
-</footer>
+  <section class="page-head">
+    <div class="container">
+      <h1>Контакты</h1>
+      <span class="mono">// ping solovceva — reply: inna742@ya.ru</span>
+      <p class="desc">Пишите по вопросам учебных материалов, консультаций по курсовым и сотрудничества.</p>
+    </div>
+  </section>
 
-<script src="js/main.js"></script>
+  <section class="content-section">
+    <div class="container">
+      <nav class="crumbs"><a href="index.html">Главная</a> &gt; Контакты</nav>
+      <div class="contact-grid">
+
+        <div class="contact-card">
+          <h2 class="section-title" style="font-size:20px">Фото</h2>
+          <figure class="photo-slot" style="margin-top:16px">
+            <img src="img/contact.jpg" alt="Соловцева Инна Александровна">
+            <figcaption>Соловцева И.А.</figcaption>
+          </figure>
+        </div>
+
+        <div class="contact-card">
+          <h2 class="section-title" style="font-size:20px">Реквизиты</h2>
+          <ul style="margin-top:16px">
+            <li>
+              <div class="k">ФИО</div>
+              <div><strong>Соловцева Инна Александровна</strong></div>
+            </li>
+            <li>
+              <div class="k">Должность</div>
+              <div>Преподаватель высшей квалификационной категории</div>
+            </li>
+            <li>
+              <div class="k">Место работы</div>
+              <div>ГПОАУ ЯО «Профессионально-педагогический колледж Ростова Великого», Борисоглебский центр
+                профессионального образования</div>
+            </li>
+            <li>
+              <div class="k">E-mail</div>
+              <div><a href="mailto:inna742@ya.ru">inna742@ya.ru</a></div>
+            </li>
+            <li>
+              <div class="k">Телефон</div>
+              <div><a href="tel:+79201023400">+7-920-102-34-00</a></div>
+            </li>
+            <li>
+              <div class="k">График консультаций</div>
+              <div><!-- укажите convenient часы --> по договорённости через e-mail</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact-card">
+          <h2 class="section-title" style="font-size:20px">Форма обратной связи</h2>
+          <form id="contact-form" style="margin-top:16px">
+            <div class="form-field">
+              <label for="f-name">Имя *</label>
+              <input id="f-name" name="name" type="text" required placeholder="Как к вам обращаться">
+            </div>
+            <div class="form-field">
+              <label for="f-email">Email *</label>
+              <input id="f-email" name="email" type="email" required placeholder="you@example.com">
+            </div>
+            <div class="form-field">
+              <label for="f-topic">Тип обращения</label>
+              <select id="f-topic" name="topic">
+                <option>Студент</option>
+                <option>Коллега</option>
+                <option>Работодатель</option>
+                <option>Другое</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="f-msg">Сообщение *</label>
+              <textarea id="f-msg" name="message" rows="5" required placeholder="Ваш вопрос или предложение"></textarea>
+            </div>
+            <div class="form-field checkbox-row">
+              <input id="f-agree" name="agree" type="checkbox" required>
+              <label for="f-agree" style="font-weight:400">Я согласен(а) на обработку персональных данных в соответствии
+                с 152-ФЗ «О персональных данных» *</label>
+            </div>
+            <button class="btn btn-primary" type="submit">Отправить сообщение</button>
+            <div id="form-ok" class="form-ok">✅ Спасибо! Открылась ваша почтовая программа — отправьте письмо. Если оно
+              не открылось, напишите напрямую: <a href="mailto:inna742@ya.ru">inna742@ya.ru</a></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© <span id="year">2019</span> Соловцева Инна Александровна</div>
+      <div class="mono">spec: 09.02.06 | status: ONLINE</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
+
 </html>
