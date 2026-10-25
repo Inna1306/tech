@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="green">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +25,10 @@
       <li><a href="method.html">Методика</a></li>
       <li><a href="contacts.html">Контакты</a></li>
     </ul>
+    <div class="theme-switch" role="group" aria-label="Цветовая тема">
+      <button type="button" data-set="green" title="Зелёная палитра">🟢 Зелёная</button>
+      <button type="button" data-set="violet" title="Сине-фиолетовая палитра">🟣 Сине-фиолетовая</button>
+    </div>
   </div>
 </header>
 
@@ -40,7 +44,14 @@
   <div class="container">
     <nav class="crumbs"><a href="index.html">Главная</a> &gt; Обо мне</nav>
     <h2 class="section-title">Раздел 1. Текст-размышление</h2>
-    <div class="essay" style="margin-top:20px">
+    <!-- МЕСТО ДЛЯ ФОТО: загрузите файл img/photo-about.jpg (портрет ~4:5) — он встанет в рамку слева -->
+    <div class="about-with-photo" style="margin-top:20px">
+      <figure class="photo-slot" aria-label="Фото Соловцевой И.А.">
+        <img src="img/photo-about.jpg" alt="Соловцева Инна Александровна, преподаватель колледжа">
+        <span>[ photo-about.jpg ]<br>деловой портрет<br>или фото за работой<br><br>→ файл img/photo-about.jpg</span>
+        <figcaption>Соловцева Инна Александровна</figcaption>
+      </figure>
+    <div class="essay">
       <p class="essay-lead">Соловцева Инна Александровна. Преподаватель колледжа. Специальность 09.02.06 «Сетевое и системное администрирование».</p>
       <p>Когда меня спрашивают, почему я до сих пор преподаю, я отвечаю просто: мне нравится смотреть, как человек понимает. Не запоминает, не сдаёт, а именно понимает — и от этого у него меняется лицо. Ради этого стоит работать.</p>
       <p>Мой путь начался в школе. Тридцать лет я была учителем информатики и биологии: вела уроки, ОГЭ, ВПР, внеурочные курсы, руководила центром «Точка роста». Школа научила меня главному — объяснять сложное простыми словами. Если ты можешь рассказать пятикласснику, как устроена клетка, и семикласснику, как работает алгоритм, значит, ты умеешь видеть суть. Этот навык я берегу до сих пор.</p>
@@ -53,7 +64,8 @@
         <a class="btn btn-primary" href="contacts.html">Написать мне</a>
         <a class="btn btn-outline pm" href="disciplines.html">Мои дисциплины</a>
       </div>
-    </div>
+    </div><!-- /.essay -->
+    </div><!-- /.about-with-photo -->
   </div>
 </section>
 

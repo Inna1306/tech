@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="green">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +25,10 @@
       <li><a href="method.html">Методика</a></li>
       <li><a href="contacts.html" class="active">Контакты</a></li>
     </ul>
+    <div class="theme-switch" role="group" aria-label="Цветовая тема">
+      <button type="button" data-set="green" title="Зелёная палитра">🟢 Зелёная</button>
+      <button type="button" data-set="violet" title="Сине-фиолетовая палитра">🟣 Сине-фиолетовая</button>
+    </div>
   </div>
 </header>
 
@@ -39,7 +43,14 @@
 <section class="content-section">
   <div class="container">
     <nav class="crumbs"><a href="index.html">Главная</a> &gt; Контакты</nav>
-    <div class="contact-grid">
+    <div class="contacts-with-photo">
+      <!-- МЕСТО ДЛЯ ФОТО: загрузите файл img/photo-contacts.jpg — он встанет сюда автоматически -->
+      <figure class="photo-slot" aria-label="Фото Соловцевой И.А. для страницы контактов">
+        <img src="img/photo-contacts.jpg" alt="Соловцева Инна Александровна">
+        <span>[ photo-contacts.jpg ]<br>фото для блока «Контакты»<br><br>→ файл img/photo-contacts.jpg</span>
+        <figcaption>Соловцева Инна Александровна</figcaption>
+      </figure>
+      <div class="contact-grid">
 
       <div class="contact-card">
         <h2 class="section-title" style="font-size:20px">Реквизиты</h2>
@@ -87,6 +98,7 @@
       </div>
 
     </div>
+    </div><!-- /.contacts-with-photo -->
   </div>
 </section>
 
