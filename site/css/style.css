@@ -109,6 +109,43 @@ a:hover { text-decoration: underline; }
   font-size: 14px; margin-bottom: 18px; display: block;
 }
 .hero p.lead { color: #94A3B8; max-width: 56ch; margin-bottom: 26px; }
+/* Обращение на первом экране */
+.hero-greeting { max-width: 62ch; margin-bottom: 26px; }
+.hero-greeting p { color: #CBD5E1; font-size: 16.5px; line-height: 1.7; margin-bottom: 12px; }
+.hero-greeting p:last-child { margin-bottom: 0; }
+
+/* Текстовые карточки и эссе */
+.prose-card {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px 28px; box-shadow: var(--shadow);
+}
+.prose-card h3 { font-family: var(--font-head); font-size: 17px; margin-bottom: 12px; }
+.prose-card p { color: var(--text-muted); font-size: 15.5px; line-height: 1.7; margin-bottom: 12px; }
+.prose-card p:last-of-type { margin-bottom: 0; }
+.prose-card .prose-lead { color: var(--text); font-weight: 600; font-size: 16.5px; }
+.about-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 22px; align-items: start; }
+.link-more { display: inline-block; margin-top: 14px; font-weight: 600; color: var(--pm-color); }
+.link-more:hover { color: var(--accent-lime); }
+.find-list { list-style: none; display: grid; gap: 14px; align-content: start; }
+.find-list li {
+  background: var(--card-bg); border: 1px solid var(--border); border-left: 3px solid var(--accent);
+  border-radius: 12px; padding: 14px 18px; font-size: 15.5px; line-height: 1.6; color: var(--text-muted);
+}
+.find-list li strong { color: var(--text); }
+.cta-band .cta-text { color: #C7D2DD; font-size: 15.5px; line-height: 1.7; max-width: 75ch; margin: 0 auto 14px; }
+.cta-band .btn { margin-top: 8px; }
+@media (max-width: 860px) { .about-duo { grid-template-columns: 1fr; } }
+
+/* Страница «Обо мне»: текст-размышление */
+.btn-outline.pm { border-color: var(--pm-color); color: var(--pm-color); background: transparent; }
+.btn-outline.pm:hover { background: rgba(163,230,53,.12); }
+.essay { max-width: 78ch; }
+.essay p { font-size: 16.5px; line-height: 1.8; color: var(--text); margin-bottom: 16px; }
+.essay .essay-lead {
+  font-family: var(--font-mono); font-size: 14.5px; color: var(--pm-color);
+  border-left: 3px solid var(--accent); padding-left: 14px; margin-bottom: 22px;
+}
+.essay-actions { margin-top: 24px; }
 
 .btn {
   display: inline-block; padding: 13px 26px; border-radius: 12px;
@@ -384,7 +421,7 @@ table.dash { width: 100%; border-collapse: collapse; min-width: 640px; }
   background: linear-gradient(120deg, var(--bg-dark), #1E293B);
   border-radius: var(--radius); color: var(--text-light);
   padding: 40px clamp(24px, 4vw, 48px); display: flex;
-  justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;
+  flex-direction: column; align-items: flex-start; gap: 16px; flex-wrap: wrap;
 }
 .cta-band h2 { font-family: var(--font-head); font-size: clamp(19px, 2.4vw, 26px); }
 
