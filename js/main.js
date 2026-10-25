@@ -77,34 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-/* Переключатель цветовой темы: green (по умолчанию) / violet */
-(function () {
-  var saved = 'violet';
-  try { saved = localStorage.getItem('theme') || 'violet'; } catch (e) {}
-  document.documentElement.setAttribute('data-theme', saved);
-
-  document.addEventListener('DOMContentLoaded', function () {
-    var wrap = document.querySelector('.theme-switch');
-    if (!wrap) return;
-    function paint() {
-      var t = document.documentElement.getAttribute('data-theme') || 'violet';
-      wrap.querySelectorAll('button').forEach(function (b) {
-        var on = b.getAttribute('data-set') === t;
-        b.classList.toggle('active-green', on && b.getAttribute('data-set') === 'green');
-        b.classList.toggle('active-violet', on && b.getAttribute('data-set') === 'violet');
-      });
-    }
-    wrap.querySelectorAll('button').forEach(function (b) {
-      b.addEventListener('click', function () {
-        var t = b.getAttribute('data-set');
-        document.documentElement.setAttribute('data-theme', t);
-        try { localStorage.setItem('theme', t); } catch (e) {}
-        paint();
-      });
-    });
-    paint();
-  });
-})();
+/* Тема оформления одна — фиолетовая (data-theme="violet"), переключатель убран */
 
 /* Если фото в слоте загрузилось — скрываем текст-подсказку */
 document.addEventListener('DOMContentLoaded', function () {

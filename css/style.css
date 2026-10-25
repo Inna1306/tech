@@ -1,57 +1,20 @@
 /* ============================================================
    Сайт преподавателя Соловцевой И.А. — «Сетевая топология»
-   Светлая база + две цветовые версии (переключаются кнопкой в
-   шапке и сохраняются в localStorage):
-   • тема "green"  — зелёная палитра (по умолчанию)
-   • тема "violet" — сине-фиолетовая палитра
+   Оформление: единственная цветовая тема — сине-фиолетовая
+   (data-theme="violet"). Переключатель тем удалён.
    ============================================================ */
 
 :root {
   --bg-dark: #0F172A;
   --bg-dark-2: #16213B;
-  --bg-light: #F8FAFC;
   --accent: #22D3EE;        /* электрик-циан */
   --accent-lime: #A3E635;   /* лайм */
   --text-dark: #0B1220;
   --text-light: #E5E7EB;
   --text-muted: #64748B;
   --card-bg: #FFFFFF;
-  --border: #E2E8F0;
-  --pm-color: #2563EB;      /* теги ПМ */
-  --op-color: #16A34A;      /* теги ОП */
-  --shadow: 0 4px 20px rgba(15, 23, 42, .08);
 
-  /* ---- Зелёная версия (тема по умолчанию) ---- */
-  --hero-bg: linear-gradient(150deg, #ECFDF5 0%, #DCFCE7 45%, #D9F7ED 100%);
-  --hero-text: #14351F;
-  --hero-muted: #3F6B52;
-  --head-bg: rgba(248, 250, 252, .92);
-  --head-text: #1E293B;
-  --accent-strong: #059669;         /* основной акцент (изумруд) */
-  --accent-soft: rgba(5, 150, 105, .10);
-  --accent-second: #65A30D;         /* второй акцент (leaf) */
-  --accent-glow: rgba(5, 150, 105, .35);
-  --btn-primary-bg: #059669;
-  --btn-primary-fg: #FFFFFF;
-  --panel-bg: #F0FDF4;              /* светлые панели вместо графита */
-  --panel-border: #BBF7D0;
-  --panel-head-bg: #DCFCE7;
-  --panel-head-text: #14532D;
-  --term-bg: #052E16;               /* терминал остаётся тёмным, но зелёным */
-  --num-color: #047857;
-  --lime-num: #4D7C0F;
-  --photo-bg: #FFFFFF;
-  --cta-bg: linear-gradient(120deg, #ECFDF5, #D1FAE5);
-  --footer-bg: #14351F;
-
-  --radius: 16px;
-  --font-head: 'Unbounded', 'Onest', sans-serif;
-  --font-body: 'Golos Text', 'Onest', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
-}
-
-/* ---- Сине-фиолетовая версия ---- */
-[data-theme="violet"] {
+  /* ---- Фиолетовая тема (единственная) ---- */
   --bg-light: #F7F7FD;
   --hero-bg: linear-gradient(150deg, #EEF1FE 0%, #E9E4FF 45%, #DDE7FF 100%);
   --hero-text: #241B4D;
@@ -75,9 +38,14 @@
   --cta-bg: linear-gradient(120deg, #EEF1FE, #E9E4FF);
   --footer-bg: #241B4D;
   --border: #E2E0F2;
-  --pm-color: #4F46E5;
-  --op-color: #7C3AED;
+  --pm-color: #4F46E5;      /* теги ПМ */
+  --op-color: #7C3AED;      /* теги ОП */
   --shadow: 0 4px 20px rgba(49, 46, 129, .08);
+
+  --radius: 16px;
+  --font-head: 'Unbounded', 'Onest', sans-serif;
+  --font-body: 'Golos Text', 'Onest', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -130,19 +98,6 @@ a:hover { text-decoration: underline; }
   background: var(--accent-second); animation: blink 1s steps(2) infinite;
 }
 @keyframes blink { 50% { opacity: 0; } }
-
-/* Кнопка переключения цветовой темы */
-.theme-switch {
-  display: flex; gap: 0; border: 1.5px solid var(--panel-border);
-  border-radius: 999px; overflow: hidden; background: #fff;
-}
-.theme-switch button {
-  font-family: var(--font-mono); font-size: 12.5px; cursor: pointer;
-  border: none; background: transparent; color: var(--text-muted);
-  padding: 7px 12px; transition: background .2s, color .2s;
-}
-.theme-switch button.active-green { background: #059669; color: #fff; }
-.theme-switch button.active-violet { background: #6D28D9; color: #fff; }
 
 .nav-toggle {
   display: none; background: none; border: 1px solid var(--accent-strong);
@@ -492,14 +447,11 @@ table.dash { width: 100%; border-collapse: collapse; min-width: 640px; }
 .mdk-list .code { font-family: var(--font-mono); color: var(--pm-color); font-weight: 700; white-space: nowrap; }
 
 .term-block {
-  background: var(--term-bg); color: #D1FAE5; font-family: var(--font-mono);
+  background: var(--term-bg); color: #DDD6FE; font-family: var(--font-mono);
   font-size: 14px; border-radius: 12px; padding: 20px 24px; margin-top: 20px;
 }
-.term-block .cmd { color: #86EFAC; }
-[data-theme="violet"] .term-block { color: #DDD6FE; }
-[data-theme="violet"] .term-block .cmd { color: #A5B4FC; }
-[data-theme="violet"] .term-block .out { color: #8B8AB8; }
-.term-block .out { color: #94A3B8; }
+.term-block .cmd { color: #A5B4FC; }
+.term-block .out { color: #8B8AB8; }
 
 /* ---------- Контакты ---------- */
 .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 34px; align-items: start; }
@@ -525,8 +477,7 @@ table.dash { width: 100%; border-collapse: collapse; min-width: 640px; }
   font-size: 14px;
 }
 .site-footer .container { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-.site-footer a { color: #7DD3FC; }
-[data-theme="green"] .site-footer a { color: #6EE7B7; }
+.site-footer a { color: #C4B5FD; }
 .site-footer .mono { font-family: var(--font-mono); font-size: 12.5px; }
 
 /* ---------- Хлебные ссылки на главной CTA ---------- */
