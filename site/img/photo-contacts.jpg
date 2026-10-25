@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#DCFCE7"/><stop offset="1" stop-color="#D9F7ED"/></linearGradient></defs>
-  <rect width="800" height="1000" fill="url(#g)"/>
-  <circle cx="400" cy="360" r="120" fill="#A7F3D0" stroke="#059669" stroke-width="4" stroke-dasharray="12 10"/>
-  <path d="M220 760 q180 -200 360 0 v240 h-360 z" fill="#A7F3D0" stroke="#059669" stroke-width="4" stroke-dasharray="12 10"/>
-  <text x="400" y="900" font-family="monospace" font-size="30" fill="#047857" text-anchor="middle">Здесь будет ваше фото</text>
-</svg>
